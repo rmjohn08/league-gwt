@@ -1,0 +1,97 @@
+functionality
+=============
+1. team registration
+2. team management
+3. league schedule
+
+site will consist of a landing page for general info
+left menu with links to the main featured functionality.
+
+
+
+     <b:Container>
+        <b:Navbar>
+    	  <g:HTMLPanel>
+    	  <h3 class="muted">League</h3>  
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><g:Anchor href="#" text="Home" styleName="active"/></li>
+                <li><g:Anchor href="#" text="League" /></li>
+                <li><g:Anchor href="#" text="Teams" /></li>
+                <li><g:Anchor href="#" text="Schedule" /></li>
+                <li><g:Anchor href="#" text="About" /></li>
+                <li><g:Anchor href="#" text="Contact"/></li>
+              </ul>
+            </div>
+          </div>
+          </g:HTMLPanel>
+    
+        </b:Navbar><!-- /.navbar -->
+     
+	 <!-- Jumbotron -->
+	 
+	  <g:HTMLPanel>   
+      <div class="jumbotron">
+        <h1>Marketing stuff!</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; Company 2014</p>
+      </footer>
+    
+	  </g:HTMLPanel>
+	  
+	  2====
+	  <b:Navbar>
+	        <b:NavbarHeader>
+	    <b:NavbarBrand>Brand</b:NavbarBrand>
+	    <b:NavbarCollapseButton dataTarget="#navbar-collapse"/>
+	  </b:NavbarHeader>
+	
+	  <b:NavbarCollapse b:id="navbar-collapse">
+	    <b:NavbarNav>
+	      <b:AnchorListItem active="true">Item 1</b:AnchorListItem>
+	      <b:AnchorListItem>Item 2</b:AnchorListItem>
+	      <b:AnchorListItem>Item 3</b:AnchorListItem>
+	     
+	    </b:NavbarNav>
+	    
+	    <!--  
+	    <b:NavbarForm pull="LEFT">
+	      <b:TextBox placeholder="Search" addStyleNames="col-lg-8"/>
+	    </b:NavbarForm>
+	
+	    <b:NavbarText pull="RIGHT">
+	      <b.html:Span>Signed in as
+	        <b:NavbarLink>John Snow</b:NavbarLink>
+	      </b.html:Span>
+	    </b:NavbarText>
+	    -->
+	  </b:NavbarCollapse>
+	</b:Navbar>
+	  
+	  

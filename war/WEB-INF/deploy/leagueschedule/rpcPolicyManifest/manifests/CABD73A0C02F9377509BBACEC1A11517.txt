@@ -1,0 +1,2 @@
+serviceClass: net.rmj.gwt.league.client.GreetingService
+path: D0C27A47AD15A32B5BB10B97192E5402.gwt.rpc
