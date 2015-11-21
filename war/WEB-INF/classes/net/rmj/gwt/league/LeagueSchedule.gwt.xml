@@ -6,17 +6,21 @@
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
   "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
 <module rename-to='leagueschedule'>
-  <!-- Inherit the core Web Toolkit stuff.                        -->
+    
+  <!-- Inherit the core Web Toolkit stuff. -->
   <replace-with class="net.rmj.gwt.league.client.ClientFactoryImpl">
     <when-type-is class="net.rmj.gwt.league.client.ClientFactory"/>
  </replace-with>
+
+  <!-- inherits name="com.google.gwt.core" / -->
   <inherits name='com.google.gwt.user.User'/>
   <inherits name='com.google.gwt.activity.Activity'/>
   <inherits name='com.google.gwt.place.Place'/>
-  <inherits name="com.google.gwt.logging.Logging" />
-<set-property name="gwt.logging.logLevel" value="INFO"/>
+  
+  <!--  inherits name="com.google.gwt.logging.Logging" / -->
+<!--  set-property name="gwt.logging.logLevel" value="INFO"/>
 <set-property name="gwt.logging.enabled" value="TRUE"/>
-<set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
+<set-property name="gwt.logging.consoleHandler" value="ENABLED"/ -->
 
 
   <!-- Inherit the default GWT style sheet.  You can change       -->
@@ -31,6 +35,7 @@
   <!--  inherits name="com.github.gwtbootstrap.Bootstrap"/ -->
 
   <inherits name="org.gwtbootstrap3.GwtBootstrap3"/>
+  <inherits name="org.gwtbootstrap3.extras.notify.Notify"/>
    
   <!--  ** setup for a custom theme for now off 
   <public path='resource'>

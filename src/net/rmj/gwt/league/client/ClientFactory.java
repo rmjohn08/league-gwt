@@ -1,7 +1,7 @@
 package net.rmj.gwt.league.client;
 
+import net.rmj.gwt.league.client.activeleague.LeagueView;
 import net.rmj.gwt.league.client.home.HomeView;
-import net.rmj.gwt.league.client.league.LeagueView;
 import net.rmj.gwt.league.client.menu.MainMenuView;
 
 import com.google.gwt.event.shared.EventBus;

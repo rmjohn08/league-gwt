@@ -3,22 +3,28 @@
  */
 package net.rmj.gwt.league.client.home;
 
+
+
+import org.gwtbootstrap3.client.ui.constants.IconType;
+import org.gwtbootstrap3.extras.notify.client.constants.NotifyIconType;
+import org.gwtbootstrap3.extras.notify.client.constants.NotifyPlacement;
+import org.gwtbootstrap3.extras.notify.client.ui.Notify;
+import org.gwtbootstrap3.extras.notify.client.ui.NotifySettings;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
  * @author ronaldo
  *
  */
-public class HomeView extends Composite implements HasText {
+public class HomeView extends Composite {
 
 	private static HomeContentUiBinder uiBinder = GWT
 			.create(HomeContentUiBinder.class);
@@ -27,6 +33,7 @@ public class HomeView extends Composite implements HasText {
 	}
 	
 	HomePresenter presenter;
+	
 
 	/**
 	 * Because this class has a default constructor, it can
@@ -43,33 +50,59 @@ public class HomeView extends Composite implements HasText {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
-	//@UiField
-	Button button;
+	@UiField
+	Button notifyBtn;
 
 	public HomeView(String firstName) {
 		initWidget(uiBinder.createAndBindUi(this));
 
 		// Can access @UiField after calling createAndBindUi
-		button.setText(firstName);
+
 	}
 
-	//@UiHandler("button")
+	@UiHandler("notifyBtn")
 	void onClick(ClickEvent e) {
-		Window.alert("Hello!");
-	}
+		//Window.alert("Hello!");
+		NotifySettings ns = NotifySettings.newSettings();
 
-	public void setText(String text) {
-		button.setText(text);
-	}
+		String template ="<div data-notify=\"container\" class=\"info\" role=\"info\">"+
+				   "<span data-notify=\"icon\">" +
+				  "<i class=\"fa fa-spinner fa-pulse \"></i>"+
+				   "</span>"+
+				  "<b><span data-notify=\"title\"></span></b>"+
+				  "<span data-notify=\"message\"></span>"+
+				  "<a href=\"#\" data-notify=\"url\"></a>"+
+				  "</div>";
+		
+		String template2 = "<div data-notify=\"container\" class=\"col-xs-11 col-sm-3 alert alert-{0}\" role=\"alert\">"+
+		" <button type=\"button\" aria-hidden=\"true\" class=\"close\" data-notify=\"dismiss\">x</button>"+
+		" <span data-notify=\"icon\"><i class=\"fa fa-spinner fa-pulse \"></i></span>"+
+		" <span data-notify=\"title\">{1}</span>" +
+		" <span data-notify=\"message\">{2}</span>" +
+		" <div class=\"progress\" data-notify=\"progressbar\"> " +
+		" <div class=\"progress-bar progress-bar-{0}\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\"></div>"+
+		" </div> "+
+		" <a href=\"{3}\" target=\"{4}\" data-notify=\"url\"></a>"+
+		"</div>"; 
 
-	/**
-	 * Gets invoked when the default constructor is called
-	 * and a string is provided in the ui.xml file.
-	 */
-	public String getText() {
-		return button.getText();
+		ns.setDelay(0);
+		ns.setPlacement(NotifyPlacement.TOP_CENTER);
+		
+		ns.setTemplate(template2);
+		//ns.makeDefault();
+
+		Notify.notify("Wait...", "Please wait...", ns);
+		
+		//Notify.hideAll();
+		
+		/* 
+		 * NotifySettings settings = NotifySettings.newSettings();
+		 
+		  settings.setType(NotifyType.SUCCESS);
+		  settings.setAllowDismiss(false);
+		 */ 
+		
 	}
-	
 
 	public void setPresenter(HomePresenter presenter) {
 		this.presenter = presenter;

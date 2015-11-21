@@ -1,7 +1,7 @@
 package net.rmj.gwt.league.client;
 
+import net.rmj.gwt.league.client.activeleague.LeagueActivity;
 import net.rmj.gwt.league.client.home.HomeActivity;
-import net.rmj.gwt.league.client.league.LeagueActivity;
 import net.rmj.gwt.league.client.places.HomePlace;
 import net.rmj.gwt.league.client.places.LeaguePlace;
 import net.rmj.gwt.league.client.places.TeamPlace;

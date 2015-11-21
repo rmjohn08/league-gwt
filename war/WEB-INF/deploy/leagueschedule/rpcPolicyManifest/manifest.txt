@@ -1,3 +1,2 @@
 # Module leagueschedule
 # RPC service class, partial path of RPC policy file
-net.rmj.gwt.league.client.GreetingService, D0C27A47AD15A32B5BB10B97192E5402.gwt.rpc
